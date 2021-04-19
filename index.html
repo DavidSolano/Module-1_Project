@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Planet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="pizza.js"></script>
+    <link rel="stylesheet" href="pizzaplanet.css">
+
+    <link rel="icon" href="logo.jpeg">
+</head>
+
+<body id="page">
+    <header><img src="pizzaRocket3.jpg"  alt="Pizza Planet" class="planet"></header>
+
+    <div class="container">
+        <nav>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active2" href="#create" role="tab" data-toggle="tab">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#location" role="tab" data-toggle="tab">Location</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#summary" role="tab" data-toggle="tab">Summary</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="tab-content">
+            <div id="create" class="tab-pane active">
+                <form id="contents">
+                    <h2>Create Your Pizza</h2>
+                    <h3>Size</h3>
+                    <input type="radio" id="small" name="size" value="Small" data-price="7">
+                    <label for="small">Small - $7</label>
+                    <br>
+
+                    <input type="radio" id="medium" name="size" value="Medium" data-price="9">
+                    <label for="medium">Medium - $9</label>
+                    <br>
+
+                    <input type="radio" id="large" name="size" value="Large" data-price="12">
+                    <label for="large">Large - $12</label>
+                    <br><br>
+
+
+                    <h3>Crust</h3>
+                    <input type="checkbox" id="thin" name="crust" value="Thin">
+                    <label for="thin">Thin</label>
+                    <br>
+
+                    <input type="checkbox" id="pan" name="crust" value="Pan">
+                    <label for="pan">Pan</label>
+                    <br>
+
+                    <input type="checkbox" id="gluten" name="crust" value="Gluten Free">
+                    <label for="gluten">Gluten Free</label>
+                    <br><br>
+
+                    <h3>Veggies - $1.00 Each</h3>
+                    <input type="checkbox" id="onion" name="veggies" value="Onion">
+                    <label for="onion">Onion</label>
+                    <br>
+
+                    <input type="checkbox" id="olives" name="veggies" value="Black Olives">
+                    <label for="olives">Black Olives</label>
+                    <br>
+
+                    <input type="checkbox" id="gPeppers" name="veggies" value="Green Peppers">
+                    <label for="gPeppers">Green Peppers</label>
+                    <br>
+
+                    <input type="checkbox" id="pineapple" name="veggies" value="Pineapple">
+                    <label for="pineapple">Pineapple</label>
+                    <br>
+
+                    <input type="checkbox" id="mushroom" name="veggies" value="Mushrooms">
+                    <label for="mushroom">Mushrooms</label>
+                    <br>
+
+                    <input type="checkbox" id="gOlives" name="veggies" value="Green Olives">
+                    <label for="gOlives">Green Olives</label>
+                    <br>
+
+                    <input type="checkbox" id="tomatoes" name="veggies" value="Tomatoes">
+                    <label for="tomatoes">Tomatoes</label>
+                    <br>
+
+                    <input type="checkbox" id="jPeppers" name="veggies" value="Jalapeño Peppers">
+                    <label for="jPeppers">Jalapeño Peppers</label>
+                    <br><br>
+
+                    <h3>Meats - $1.50 Each</h3>
+                    <input type="checkbox" id="pep" name="meat" value="Pepperoni">
+                    <label for="pep">Pepperoni</label>
+                    <br>
+
+                    <input type="checkbox" id="iSausage" name="meat" value="Italian Sausage">
+                    <label for="iSausage">Italian Sausage</label>
+                    <br>
+
+                    <input type="checkbox" id="bacon" name="meat" value="Bacon">
+                    <label for="bacon">Bacon</label>
+                    <br>
+
+                    <input type="checkbox" id="chicken" name="meat" value="Chicken">
+                    <label for="chicken">Chicken</label>
+                    <br>
+
+                    <input type="checkbox" id="salami" name="meat" value="Salami">
+                    <label for="salami">Salami</label>
+                    <br>
+
+                    <input type="checkbox" id="hamburger" name="meat" value="Hamburger">
+                    <label for="hamburger">Hamburger</label>
+                    <br>
+
+                    <input type="checkbox" id="cBacon" name="meat" value="Canadian Bacon">
+                    <label for="cBacon">Canadian Bacon</label>
+                    <br>
+
+                    <input type="checkbox" id="steak" name="meat" value="Steak">
+                    <label for="steak">Steak</label>
+                    <br>
+
+                    <button id="goToNew" class="btn btn-primary"><a href="#" data-toggle="tab">Continue</a></button>
+                </form>
+            </div>
+
+            <div id="location" class="tab-pane">
+                <form id="whereabouts">
+                    <h2>Enter your information</h2>
+                    <h3>Contact Information</h3>
+                    <label for="fName">First Name*</label>
+                    <input type="text" id="fName" placeholder="First Name" required autofocus>
+                    <br>
+
+                    <label for="lName">Last Name*</label>
+                    <input type="text" id="lName" placeholder="Last Name" required>
+                    <br>
+
+                    <label for="pNumber">Phone Number*</label>
+                    <input type="number" id="pNumber" placeholder="(414)888 8888" required>
+                    <br><br>
+
+                    <h3>Delivery Information</h3>
+                    <label for="sAddress">Street Address*</label>
+                    <input type="text" id="sAddress" required>
+                    <br>
+
+                    <label for="apartment">Apt/Suite</label>
+                    <input type="number" id="apartment">
+                    <br>
+
+                    <label for="city">City*</label>
+                    <input type="text" id="city" required>
+                    <br>
+
+                    <label for="state">State*</label>
+                    <input type="text" id="state" size="3" pattern="[A-Za-z]{2}" placeholder="WI" required>
+                    <br>
+
+                    <label for="zCode">Zip Code*</label>
+                    <input type="number" id="zCode" required>
+                    <br><br>
+
+                    <button id="goToCheckOut" class="btn btn-primary"><a href="#" data-toggle="tab">Continue</a></button>
+                </form>
+            </div>
+
+            <div id="summary" class="tab-pane">
+                <form id="recap">
+                    <h2>Order Summary</h2>
+                    <br>
+
+                    <h3>Contact Details</h3>
+                    <table class="contact info">
+                        <tr>
+                            <td>Name:</td>
+                            <td id="nameOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number:</td>
+                            <td id="phoneNumber"></td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td id="addressOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Apartment/Suite:</td>
+                            <td id="apartmentOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>City:</td>
+                            <td id="cityOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>State:</td>
+                            <td id="stateOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Zip Code:</td>
+                            <td id="zipCodeOutput"></td>
+                        </tr>
+                    </table>
+                    <br>
+
+                    <h3>Pizza Details</h3>
+                    <table class="pizza info">
+                        <tr>
+                            <td>Size:</td>
+                            <td id="sizeOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Crust:</td>
+                            <td id="crustOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Veggie Toppings:</td>
+                            <td id="veggieOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Meat Toppings:</td>
+                            <td id="meatOutput"></td>
+                        </tr>
+                    </table>
+                    <br>
+
+                    <h3>Order Total</h3>
+                    <table>
+                        <tr>
+                            <td>Subtotal:</td>
+                            <td id="subtotalOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Tax:</td>
+                            <td id="taxOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Fee:</td>
+                            <td id="deliveryFeeOutput"></td>
+                        </tr>
+                        <tr>
+                            <td>Grand Total:</td>
+                            <td id="grandTotalOutput"></td>
+                        </tr>
+                    </table>
+                    <br>
+
+                    <button id="placeOrder">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+img.planet{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: auto;
+}
+
+header{
+    background-color: black;
+}
+
+#goToNew{
+    background-color: #dbdb0f;
+}
+
+#goToCheckOut{
+    background-color: #dbdb0f;
+}
+
+body{
+    background-image: url("lplanets.jpg");
+    background-repeat: repeat;
+}
+
+.container{
+    background-color: black;
+    color: lightgray;
+}
